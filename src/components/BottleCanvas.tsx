@@ -1,7 +1,7 @@
 'use client'
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Text } from '@react-three/drei'
+import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
 function DropperBottle() {
@@ -15,7 +15,6 @@ function DropperBottle() {
 
   return (
     <group ref={groupRef}>
-      {/* Bottle body */}
       <mesh position={[0, -0.2, 0]}>
         <cylinderGeometry args={[0.5, 0.55, 2.2, 32]} />
         <meshPhysicalMaterial
@@ -27,27 +26,22 @@ function DropperBottle() {
           transmission={0.7}
         />
       </mesh>
-      {/* Bottle shoulder */}
       <mesh position={[0, 1.0, 0]}>
         <cylinderGeometry args={[0.22, 0.5, 0.5, 32]} />
         <meshPhysicalMaterial color="#c8e8f0" transparent opacity={0.75} roughness={0.05} transmission={0.7} />
       </mesh>
-      {/* Bottle neck */}
       <mesh position={[0, 1.4, 0]}>
         <cylinderGeometry args={[0.2, 0.22, 0.35, 32]} />
         <meshStandardMaterial color="#d0d0d0" metalness={0.3} roughness={0.2} />
       </mesh>
-      {/* Dropper cap */}
       <mesh position={[0, 1.85, 0]}>
         <cylinderGeometry args={[0.28, 0.28, 0.6, 32]} />
         <meshStandardMaterial color="#1a1a1a" metalness={0.1} roughness={0.5} />
       </mesh>
-      {/* Dropper tip */}
       <mesh position={[0, 2.25, 0]}>
         <sphereGeometry args={[0.1, 16, 16]} />
         <meshStandardMaterial color="#1a1a1a" />
       </mesh>
-      {/* Liquid inside */}
       <mesh position={[0, -0.3, 0]}>
         <cylinderGeometry args={[0.38, 0.42, 1.6, 32]} />
         <meshPhysicalMaterial color="#aed6e8" transparent opacity={0.5} roughness={0} transmission={0.8} />

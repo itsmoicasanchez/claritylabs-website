@@ -7,24 +7,12 @@ export default function Footer() {
         <p className="text-sm tracking-widest mb-4">**** SAVE THIS RECEIPT ****</p>
         <p className="text-xs tracking-widest mb-2">------------------------------------------------</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 text-xs tracking-wide">
-          <div>
-            <p className="font-bold mb-2">CLARITYLABS</p>
-            <p>HYALURONIC ACID SERUM</p>
-            <p>30ML / $24.99</p>
-          </div>
-          <div>
-            <p className="font-bold mb-2">CONTACT</p>
-            <p>SUPPORT@CLARITYLABS.COM</p>
-            <p>MON-FRI 9AM-5PM EST</p>
-          </div>
-          <div>
-            <p className="font-bold mb-2">POLICIES</p>
-            <p>30-DAY RETURNS</p>
-            <p>FREE SHIPPING OVER $35</p>
-          </div>
+          <div><p className="font-bold mb-2">CLARITYLABS</p><p>HYALURONIC ACID SERUM</p><p>30ML / $24.99</p></div>
+          <div><p className="font-bold mb-2">CONTACT</p><p>SUPPORT@CLARITYLABS.COM</p><p>MON-FRI 9AM-5PM EST</p></div>
+          <div><p className="font-bold mb-2">POLICIES</p><p>30-DAY RETURNS</p><p>FREE SHIPPING OVER $35</p></div>
         </div>
         <p className="text-xs tracking-widest mb-2">------------------------------------------------</p>
-        <p className="text-xs tracking-widest">© {new Date().getFullYear()} CLARITYLABS. ALL RIGHTS RESERVED.</p>
+        <p className="text-xs tracking-widest">© 2024 CLARITYLABS. ALL RIGHTS RESERVED.</p>
         <p className="text-xs tracking-widest mt-1">** KEEP AWAY FROM CHILDREN **</p>
       </div>
     </footer>
