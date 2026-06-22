@@ -1,33 +1,38 @@
-'use client'
+import Image from 'next/image'
 
-const photos = [
-  { label: 'MORNING ROUTINE', bg: '#c8e8f0' },
-  { label: 'SERUM TEXTURE', bg: '#e8f4f8' },
-  { label: 'SKIN RESULTS', bg: '#d4edf5' },
-  { label: 'CLEAN FORMULA', bg: '#b8dce8' },
+const images = [
+  { src: '/images/gallery-1.jpg', label: 'Morning Routine' },
+  { src: '/images/gallery-2.jpg', label: 'Serum Texture' },
+  { src: '/images/gallery-3.jpg', label: 'Skin Results' },
+  { src: '/images/gallery-4.jpg', label: 'Clean Formula' },
 ]
 
 export default function Gallery() {
   return (
-    <section className="max-w-5xl mx-auto px-4 py-12">
-      <div className="font-mono text-center mb-8">
-        <div className="dashed-divider" />
-        <h2 className="text-2xl font-bold tracking-widest my-4">PHOTO GALLERY</h2>
-        <p className="text-xs tracking-widest">* ITEM REFERENCE IMAGES *</p>
-        <div className="dashed-divider" />
-      </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        {photos.map((p) => (
-          <div
-            key={p.label}
-            className="receipt-border aspect-square flex flex-col items-center justify-end pb-3"
-            style={{ background: p.bg }}
-          >
-            <div className="bg-[#fafaf7] border-t-2 border-[#1a1a1a] w-full text-center py-2 font-mono text-xs tracking-widest">
-              {p.label}
+    <section className="py-24 bg-cream">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-14">
+          <span className="text-sm font-semibold text-navy uppercase tracking-widest">Gallery</span>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold text-gray-900 mt-3">
+            Real Results
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 gap-4 md:gap-6">
+          {images.map((img) => (
+            <div key={img.src} className="relative aspect-square rounded-2xl overflow-hidden group">
+              <Image
+                src={img.src}
+                alt={img.label}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+                <span className="text-white font-semibold text-sm">{img.label}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
