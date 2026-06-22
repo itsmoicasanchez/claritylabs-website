@@ -6,6 +6,7 @@ import Ingredients from '@/components/Ingredients'
 import HowToUse from '@/components/HowToUse'
 import Gallery from '@/components/Gallery'
 import Reviews from '@/components/Reviews'
+import ReviewReminder from '@/components/ReviewReminder'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 
@@ -20,6 +21,7 @@ export default function Home() {
       <HowToUse />
       <Gallery />
       <Reviews />
+              <ReviewReminder />
       <CTA />
       <Footer />
     </main>
