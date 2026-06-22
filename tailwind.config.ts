@@ -8,8 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        navy: '#003087',
+        'navy-dark': '#002066',
+        cream: '#fafaf8',
+        'warm-white': '#f8f6f3',
+      },
       fontFamily: {
-        mono: ['"Courier New"', 'Courier', 'monospace'],
+        display: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
