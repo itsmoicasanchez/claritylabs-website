@@ -42,9 +42,9 @@ export default function Hero() {
 
           {/* Price */}
           <div className="flex items-baseline gap-3">
-            <span className="text-4xl font-bold text-gray-900">$24.99</span>
-            <span className="text-gray-400 text-sm line-through">$34.99</span>
-            <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Save 28%</span>
+            <span className="text-4xl font-bold text-gray-900"$29.99</span>
+            <span className="text-gray-400 text-sm line-through">$42.99</span>
+            <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full">Save 30%span>
           </div>
 
           {/* CTA Buttons */}
