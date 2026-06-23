@@ -3,8 +3,6 @@ import Image from 'next/image'
 const images = [
   { src: '/images/gallery-1.jpg', label: 'Morning Routine' },
   { src: '/images/gallery-2.jpg', label: 'Serum Texture' },
-  { src: '/images/gallery-3.jpg', label: 'Skin Results' },
-  { src: '/images/gallery-4.jpg', label: 'Clean Formula' },
 ]
 
 export default function Gallery() {
